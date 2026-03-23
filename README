@@ -1,0 +1,11 @@
+# IR_Quick_Write.py
+
+Interactive policy violation incident report generator.
+
+## How to run
+
+1. Make sure you have Python 3 installed.
+2. Download `IR_Quick_Write.py`.
+3. Run in terminal: 
+  ```bash
+  python IR_Quick_Write.py
