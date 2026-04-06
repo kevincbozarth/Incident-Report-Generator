@@ -9,3 +9,68 @@ Interactive policy violation incident report generator.
 3. Run in terminal: 
   ```bash
   python IR_Quick_Write.py
+
+🚨 IR Quick Write – Features (v1.0)
+Core Functionality
+- Generates fully formatted incident reports based on user input, following a consistent and professional structure.
+- Handles multiple Resident Assistants (RAs)
+- Supports multiple unidentified respondents with physical descriptions
+- Dynamic Scaling: Uses lists and object-oriented design to handle any number of participants without hardcoded limits.
+Input Validation System
+- Student ID validation
+  Ensures numeric input
+Enforces 7-digit format
+Allows "N/A" for non-UCSC respondents
+- Date validation
+  Valid weekday, month, day, and year ranges
+  Prevents invalid or malformed entries
+- Time parsing
+  Accepts HH:MM AM/PM format
+  Normalizes formatting (e.g., leading zeros, capitalization)
+  Validates hour (1–12) and minute (0–59)
+- Controlled inputs
+  Gender validation for pronoun assignment
+  College housing validation
+  Numeric validation for participant counts
+Object-Oriented Design
+- Custom classes:
+ResidentAssistant
+Respondent
+UnidentifiedRespondent
+- Each object stores:
+  Name
+  ID
+  Role
+  Pronouns (auto-assigned)
+- Clean separation between:
+  Data (classes)
+  Input validation (functions)
+  Output generation (main loop)
+Smart Text Generation
+- Pronoun system
+  Automatically assigns and uses correct pronouns
+  Supports male, female, and nonbinary/other
+- Context-aware reporting
+  Adjusts based on:
+  Identification status
+  Compliance behavior
+  Number of individuals involved
+- Formatted narrative output
+  Produces a clean, professional report ready for submission with minimal editing
+Usability
+- Interactive CLI workflow
+  Step-by-step prompts guide the user through report creation
+- Error feedback
+  Immediate, clear error messages for invalid input
+- Repeatable session
+  Generate multiple reports in one run
+Technical Highlights
+- Uses Python classes and lists for scalability
+- Implements input validation loops for robustness
+- Uses f-strings for clean formatting
+- Modular function design for maintainability
+🔧 Planned Improvements
+- Grammar handling (singular vs plural phrasing)
+- Export to .txt or .pdf
+- GUI or web interface
+- Template customization for different housing policies
